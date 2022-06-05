@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vacunate</title>
+    <!--Import CSS Materialize-->
+    <link rel="stylesheet" href="src/materialize-v1.0.0-rc.2/materialize/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <script src="src/materialize-v1.0.0-rc.2/materialize/js/materialize.min.js">
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header class="MenuHamburguesa">
+        <ul id="slide-out" class="sidenav sidenav-fixed blue lighten-2">
+            <li>
+                <div class="user-view">
+
+                    <a href="#name"><span id="nameUser" class="white-text name"></span></a>
+                    <a href="#email"><span id="emailUser" class="white-text email"></span></a>
+                </div>
+            </li>
+            <li><a><i style="color:white" class="material-icons">vpn_key</i><span
+                        class="white-text name">Paises</span></a></li>
+            <li><a><i style="color:white" class="material-icons">category</i><span
+                        class="white-text name">Categorias</span></a></li>
+
+            <li>
+                <a id="loginButton" data-target="modal1" class="btn modal-trigger">
+                    <span class="white-text name">Login</span>
+                </a>
+            </li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i
+                class="hide-on-large-only material-icons">menu</i></a>
+    </header>
+
+    <div class="FormularioModal">
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Login</h4>
+                <p>Ingrese informacion de sesion</p>
+            </div>
+
+            <div class="row">
+                <form action="POST" id="loginForm" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="email" type="email" placeholder="Correo" class="validate">
+
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">lock</i>
+                            <input id="password" type="password" class="validate" placeholder="Contraseña">
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <button class="waves-effect waves-light btn modal-trigger" style="margin: 20px;"
+                onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <link href="resources/modal.html" style="background-color:red;">
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="actions/materialize.js"></script>
+    <script src="actions/Login.js"></script>
+</body>
+
+</html>
