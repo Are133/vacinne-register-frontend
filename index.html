@@ -24,6 +24,11 @@
                 </div>
             </li>
             <li>
+                <a id="registerVacinnePerson" data-target="modal5" class="btn modal-trigger">
+                    <span class="white-text name">Vacunate</span>
+                </a>
+            </li>
+            <li>
                 <a id="registerVacinne" data-target="modal3" class="btn modal-trigger">
                     <span class="white-text name">Registrar Vacunas</span>
                 </a>
@@ -145,7 +150,7 @@
                           <option value="" disabled selected>Choose your option</option>
                           
                         </select>
-                      </div>
+                    </div>
                 </form>
             </div>
 
@@ -154,7 +159,7 @@
         </div>
     </div>
 
-    <div class="FormularioModalLogin">
+    <div class="FormularioModalRegistrarMunicipios">
         <!-- Modal Structure -->
         <div id="modal4" class="modal">
             <div class="modal-content">
@@ -176,6 +181,58 @@
                 onclick="registerMunicipality()">Registrar</button>
         </div>
     </div>
+    <div class="FormularioModalPerson">
+        <!-- Modal Structure -->
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <h4>Vacunate</h4>
+            </div>
+
+            <div class="row">
+                <form method="post" id="vacunateLoginForm" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="vacunateName" type="text" placeholder="Nombre" class="validate">
+                        </div>
+
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="vacunateLastName" type="text" placeholder="Apellidos" class="validate">
+                        </div>
+
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">description</i>
+                            <input id="vacunateCURP" type="text" placeholder="CURP" class="validate">
+                        </div>
+
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">brightness_auto</i>
+                            <input id="vacunateAge" type="text" placeholder="Edad" class="validate">
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h6>Municipios</h6>
+                            <select class="browser-default" id="vacunateAndMunicipilaties">
+                              <option value="" disabled selected>Seleccione Municipio</option>                              
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h6>Vacunas</h6>
+                            <select class="browser-default" id="vacunateAndVacinnes">
+                              <option value="" disabled selected>Seleccione Vacuna</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <button class="waves-effect waves-light btn modal-trigger" style="margin: 20px;"
+                onclick="vacinneRegisterPerson()">Registrar</button>
+        </div>
+    </div>
+
     
 
     <link href="resources/modal.html" style="background-color:red;">
@@ -185,6 +242,7 @@
     <script src="actions/RegisterUser.js"></script>
     <script src="actions/RegisterVacinne.js"></script>
     <script src="actions/RegisterMunicipality.js"></script>
+    <script src="actions/VacinneRegisterPerson.js"></script>
 </body>
 
 </html>
