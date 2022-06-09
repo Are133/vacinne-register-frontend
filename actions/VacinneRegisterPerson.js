@@ -52,7 +52,7 @@ const vacinneRegisterPerson = async () =>{
     let url = "https://localhost:44353/api/person"
     
     let personName = document.getElementById("vacunateName").value;
-    let personLastName = document.getElementById("vacunateLastName").value;
+    let personLastName = document.getElementById("vacunateLastsName").value;
     let personCURP = document.getElementById("vacunateCURP").value;
     let cboMunicipalitiesSelected = document.getElementById("vacunateAndMunicipilaties").value;
     let cboVacinnesSelected = document.getElementById("vacunateAndVacinnes").value;
@@ -61,8 +61,8 @@ const vacinneRegisterPerson = async () =>{
       Name: personName,
       LastNames: personLastName,
       CURP: personCURP,
-      IdVacinne: cboVacinnesSelected,
       IdMunicipality: cboMunicipalitiesSelected,
+      IdVacinne: cboVacinnesSelected,
     };
 
     jsonObject.Name = personName;
@@ -91,5 +91,6 @@ const vacinneRegisterPerson = async () =>{
       } catch {
         alert("Ocurrio un error intenta mas tarde");
       }
+
 
 }

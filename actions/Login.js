@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let registerButton = document.getElementById('registerButton');
     let registerVacinnes = document.getElementById("registerVacinne");
     let registerMunicipality = document.getElementById("registerMunicipality");
+    let buttonVacunate = document.getElementById("registerVacinnePerson");
 
     let nameUserLogued = localStorage.getItem('name');
     let emailUserLogued = localStorage.getItem('email');
@@ -30,11 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
         emailUser.innerText = emailUserLogued;
         registerButton.style.display = 'none';
         loginButton.innerText = "Salir";
+        buttonVacunate.style.display = 'none';
         return;
     }
 
     registerVacinnes.style.display = 'none';
     registerMunicipality.style.display = 'none';
+    buttonVacunate.style.display = 'visible';
 })
 
 const login = async () => {
